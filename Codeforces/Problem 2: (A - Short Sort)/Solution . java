@@ -1,0 +1,24 @@
+import java.util.Scanner;
+
+public class main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int t = sc.nextInt(); // Read the number of test cases
+        sc.nextLine(); // Consume the newline
+
+        while (t-- > 0) {
+            String str = sc.nextLine();
+
+            if ((str.charAt(0) == 'a' && str.charAt(1) == 'b' && str.charAt(2) == 'c') ||
+                    (str.charAt(0) == 'a' && str.charAt(1) == 'c' && str.charAt(2) == 'b') ||
+                    (str.charAt(0) == 'b' && str.charAt(1) == 'a' && str.charAt(2) == 'c') ||
+                    (str.charAt(0) == 'c' && str.charAt(1) == 'b' && str.charAt(2) == 'a')) {
+                System.out.println("YES");
+            } else {
+                System.out.println("NO");
+            }
+        }
+
+        sc.close();
+    }
+}
