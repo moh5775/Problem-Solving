@@ -1,9 +1,0 @@
-#include<stdio.h>
-int main ()
-{
-  char s1[1000],s2[1000];
-  scanf("%s",&s1);
-  scanf("%s",&s2);
-  printf("%d %d\n",strlen(s1),strlen(s2));
-  printf("%s %s\n",s1,s2);
-}
