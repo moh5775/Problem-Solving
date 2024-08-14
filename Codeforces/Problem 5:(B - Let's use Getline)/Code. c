@@ -1,0 +1,15 @@
+#include<stdio.h>
+int main ()
+{
+    char str[1000000];
+    int i;
+    fgets(str,sizeof(str),stdin);
+    for(i=0;str[i]!='\0';i++)
+    {
+     if(str[i]=='\\')
+     break ;
+     else
+     printf("%c",str[i]);
+    }
+    
+}
