@@ -1,0 +1,23 @@
+#include<stdio.h>
+
+int main()
+{
+    int n,x,y,z;
+    scanf("%d",&n);
+    int i;
+    for(i=1; i<=n; i++)
+    {
+        scanf("%d %d %d",&x,&y,&z);
+        int m,n,p;
+        m=abs(x-y)+abs(y-y)+abs(z-y);
+        n=abs(x-z)+abs(y-z)+abs(z-z);
+        p=abs(x-x)+abs(y-x)+abs(z-x);
+        printf("%d %d %d\n",m,n,p);
+        if(m<=n&&m<=p)
+            printf("%d\n",m);
+        else if(n<=m&&n<=p)
+            printf("%d\n",n);
+        else
+            printf("%d\n",p);
+    }
+}
