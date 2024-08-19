@@ -1,0 +1,22 @@
+#include<stdio.h>
+int main()
+{
+    int x,n,i;
+    scanf("%d %d",&x,&n);
+    int num=x;
+
+    int last;
+    for(i=1; i<=n; i++)
+    {
+        last=num%10;
+        if(last>=1)
+        {
+            num=num-1;
+        }
+        else
+        {
+            num=num/10;
+        }
+    }
+    printf("%d\n",num);
+}
