@@ -1,0 +1,33 @@
+import java.util.Scanner;
+
+public class CF_A {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        int n = input.nextInt();
+        input.nextLine(); // Consume the newline character after the integer input
+
+        for (int i = 1; i <= n; i++) {
+            String str = input.nextLine();
+            boolean isValid = false;
+
+            if (str.length() >= 2) {
+                // Check if the string starts with "10" and ends with a valid digit as per the length
+                if (str.charAt(0) == '1' && str.charAt(1) == '0') {
+                    if (str.length() >= 4) {
+                        if (str.charAt(str.length() - 1) >= '0' && str.charAt(str.length() - 2) >= '1') {
+                            isValid = true;
+                        }
+                    } else if (str.length() == 3) {
+                        if (str.charAt(str.length() - 1) >= '2') {
+                            isValid = true;
+                        }
+                    }
+                }
+            }
+
+            System.out.println(isValid ? "YES" : "NO");
+        }
+
+        input.close();
+    }
+}
