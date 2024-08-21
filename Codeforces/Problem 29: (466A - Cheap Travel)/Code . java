@@ -1,0 +1,32 @@
+#include<stdio.h>
+int main()
+{
+    int n,m,a,b;
+    scanf("%d %d %d %d",&n,&m,&a,&b);
+    if(n>m)
+    {
+        if((n%m)*b<(n%m)*a)
+            printf("%d\n",(n/m)*b+b);
+
+        else
+        {
+            int p= n*a;
+            int q=(n/m)*b+(n%m)*a;
+            int r=(n/m)*b+(n%m)*b;
+            int min=p;
+            if(q<min)
+                min=q;
+            if(r<min)
+                min=r;
+            printf("%d\n",min);
+        }
+
+    }
+    else
+    {
+        if(n*a<b)
+            printf("%d\n",n*a);
+        else
+            printf("%d\n",b);
+    }
+}
