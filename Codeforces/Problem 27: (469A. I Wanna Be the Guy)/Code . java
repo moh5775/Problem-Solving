@@ -1,0 +1,35 @@
+
+import java.util.HashSet;
+import java.util.Scanner;
+import java.util.Set;
+
+public class cff {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        Set<Integer> list = new HashSet<>();
+        int n = input.nextInt();
+        int x = input.nextInt();
+        int[] a = new int[x];
+        int i;
+        for (i = 0; i < x; i++) {
+            a[i] = input.nextInt();
+            list.add(a[i]);
+        }
+        int y = input.nextInt();
+        int[] b = new int[y];
+
+        for (i = 0; i < y; i++) {
+            b[i] = input.nextInt();
+            list.add(b[i]);
+        }
+        int flag = 0;
+        for (i = 1; i <= n; i++) {
+            if (!list.contains(i))
+                flag = 1;
+        }
+        if (flag == 0)
+            System.out.println("I become the guy.");
+        else
+            System.out.println("Oh, my keyboard!");
+    }
+}
